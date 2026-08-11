@@ -100,12 +100,8 @@ Android/network-проект GRXT для работы с сетевыми под
 
 <div align="center">
 
-<img width="98%" src="https://raw.githubusercontent.com/Gr1xzz11/Gr1xzz11/main/profile-summary-card-output/github_dark/0-profile-details.svg" alt="Profile details" />
-
-<br>
-
-<img width="49%" src="https://raw.githubusercontent.com/Gr1xzz11/Gr1xzz11/main/profile-summary-card-output/github_dark/1-repos-per-language.svg" alt="Repos per language" />
-<img width="49%" src="https://raw.githubusercontent.com/Gr1xzz11/Gr1xzz11/main/profile-summary-card-output/github_dark/3-stats.svg" alt="GitHub stats" />
+<img width="49%" src="./assets/github-stats.svg" alt="GitHub Stats" />
+<img width="49%" src="./assets/top-langs.svg" alt="Top Languages" />
 
 </div>
 
