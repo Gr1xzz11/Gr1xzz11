@@ -98,12 +98,16 @@ Android/network-проект GRXT для работы с сетевыми под
 
 ## 📊 GitHub Stats
 
-<div align="center">
-
-<img width="49%" src="./assets/github-stats.svg" alt="GitHub Stats" />
-<img width="49%" src="./assets/top-langs.svg" alt="Top Languages" />
-
-</div>
+<table width="100%">
+<tr>
+<td width="50%" valign="top" align="center">
+<img width="100%" src="./assets/github-stats.svg" alt="GitHub Stats" />
+</td>
+<td width="50%" valign="top" align="center">
+<img width="100%" src="./assets/top-langs.svg" alt="Top Languages" />
+</td>
+</tr>
+</table>
 
 ---
 
