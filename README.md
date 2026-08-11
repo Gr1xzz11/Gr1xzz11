@@ -14,6 +14,7 @@
 
 [![Website](https://img.shields.io/badge/grxt.dev-111827?style=for-the-badge&logo=googlechrome&logoColor=58A6FF)](https://grxt.dev)
 [![GitHub](https://img.shields.io/badge/GitHub-Gr1xzz11-111827?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Gr1xzz11)
+![Profile views](https://komarev.com/ghpvc/?username=Gr1xzz11&style=for-the-badge&color=2563EB&label=PROFILE+VIEWS)
 
 </div>
 
@@ -86,7 +87,7 @@ Android/network-проект GRXT для работы с сетевыми под
 
 ---
 
-## 🚀 Сейчас в фокусе
+## ⚡ Сейчас в фокусе
 
 - развитие проектов **GRXT**
 - Android и desktop-приложения
@@ -95,9 +96,32 @@ Android/network-проект GRXT для работы с сетевыми под
 
 ---
 
-## 📊 GitHub
+## 📊 GitHub Stats
 
-Профильная статистика и графики активности будут добавлены отдельно после настройки стабильной генерации SVG — без битых картинок и зависимостей, которые регулярно отваливаются.
+<div align="center">
+
+<img width="98%" src="https://raw.githubusercontent.com/Gr1xzz11/Gr1xzz11/main/profile-summary-card-output/github_dark/0-profile-details.svg" alt="Profile details" />
+
+<br>
+
+<img width="49%" src="https://raw.githubusercontent.com/Gr1xzz11/Gr1xzz11/main/profile-summary-card-output/github_dark/1-repos-per-language.svg" alt="Repos per language" />
+<img width="49%" src="https://raw.githubusercontent.com/Gr1xzz11/Gr1xzz11/main/profile-summary-card-output/github_dark/3-stats.svg" alt="GitHub stats" />
+
+</div>
+
+---
+
+## 🐍 Активность
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Gr1xzz11/Gr1xzz11/output/github-contribution-grid-snake.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Gr1xzz11/Gr1xzz11/output/github-contribution-grid-snake-light.svg" />
+  <img alt="Contribution snake" src="https://raw.githubusercontent.com/Gr1xzz11/Gr1xzz11/output/github-contribution-grid-snake.svg" />
+</picture>
+
+</div>
 
 ---
 
