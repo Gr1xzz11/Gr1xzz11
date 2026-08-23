@@ -1,0 +1,92 @@
+name: GRXT Math 0.2 Final Build
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/grxt-math-020-temp.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout build branch
+        uses: actions/checkout@v4
+        with:
+          ref: grxt-math-build
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Restore, patch, test and build
+        shell: bash
+        run: |
+          set +e
+          LOG=/tmp/grxt-math-020.log
+          (
+            set -euo pipefail
+            rm -rf GRXT-Math
+            cat \
+              GRXT-Math-build/src/chunk-00.b64 \
+              GRXT-Math-build/src/chunk-01.b64 \
+              GRXT-Math-build/src/chunk-02a.b64 \
+              GRXT-Math-build/src/chunk-02b.b64 \
+              GRXT-Math-build/src/chunk-02c.b64 \
+              GRXT-Math-build/src/chunk-02d.b64 \
+              GRXT-Math-build/src/chunk-03.b64 \
+              GRXT-Math-build/src/chunk-04.b64 \
+              GRXT-Math-build/src/chunk-05.b64 \
+              | base64 --decode > /tmp/GRXT-Math.zip
+            echo '3a6b5ab316edb36719266f4b6afe709c27d16c284f8465633b0b7006680f8404  /tmp/GRXT-Math.zip' | sha256sum -c -
+            unzip -q /tmp/GRXT-Math.zip -d .
+
+            cat \
+              GRXT-Math-build/update-0.2/patch-00.b64 \
+              GRXT-Math-build/update-0.2/patch-01.b64 \
+              GRXT-Math-build/update-0.2/patch-02a.b64 \
+              GRXT-Math-build/update-0.2/patch-02b.b64 \
+              GRXT-Math-build/update-0.2/patch-03.b64 \
+              > /tmp/grxt020.patch.gz.b64
+            echo 'acb0af31fdb5edd52fbf4c04dcace77fc3e41c33d13326f233731f33e88b3080  /tmp/grxt020.patch.gz.b64' | sha256sum -c -
+            base64 --decode /tmp/grxt020.patch.gz.b64 | gunzip > /tmp/grxt020.patch
+            echo '68ce878c045f2d580ebc24d67846be00bde8a54ea42ce72cfc16c62f8bea0610  /tmp/grxt020.patch' | sha256sum -c -
+
+            cd GRXT-Math
+            patch -p1 < /tmp/grxt020.patch
+
+            SDKMANAGER="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
+            yes | "$SDKMANAGER" --licenses >/dev/null || true
+            "$SDKMANAGER" --channel=3 'platform-tools' 'platforms;android-37.0' 'build-tools;37.0.0'
+
+            chmod +x gradlew
+            ./gradlew --no-daemon :math-core:test :app:assembleDebug
+          ) >"$LOG" 2>&1
+          RC=$?
+          set -e
+
+          OUT=GRXT-Math-build/output
+          mkdir -p "$OUT"
+          rm -f "$OUT/GRXT-Math-0.2.0-debug.apk" "$OUT/GRXT-Math-0.2.0-debug.apk.sha256" "$OUT/BUILD_FAILED_0.2.log" "$OUT/status-0.2.txt"
+
+          if [ "$RC" -eq 0 ] && [ -f GRXT-Math/app/build/outputs/apk/debug/app-debug.apk ]; then
+            cp GRXT-Math/app/build/outputs/apk/debug/app-debug.apk "$OUT/GRXT-Math-0.2.0-debug.apk"
+            sha256sum "$OUT/GRXT-Math-0.2.0-debug.apk" > "$OUT/GRXT-Math-0.2.0-debug.apk.sha256"
+            printf 'SUCCESS\n' > "$OUT/status-0.2.txt"
+          else
+            cp "$LOG" "$OUT/BUILD_FAILED_0.2.log"
+            printf 'FAILED (exit %s)\n' "$RC" > "$OUT/status-0.2.txt"
+          fi
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f "$OUT"
+          git commit -m 'build: GRXT Math 0.2 final result [skip ci]' || true
+          git push origin HEAD:grxt-math-build
+          exit "$RC"
