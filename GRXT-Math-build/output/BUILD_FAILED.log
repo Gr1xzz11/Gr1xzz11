@@ -1,1 +1,5 @@
-base64: invalid input
+warning [/tmp/GRXT-Math.zip]:  5250 extra bytes at beginning or within zipfile
+  (attempting to process anyway)
+file #1:  bad zipfile offset (local header sig):  5250
+  (attempting to re-compensate)
+error: invalid zip file with overlapped components (possible zip bomb)
