@@ -40,7 +40,20 @@ jobs:
           (
             set -euo pipefail
             rm -rf GRXT-Math
-            cat GRXT-Math-build/src/chunk-*.b64 | base64 --decode > /tmp/GRXT-Math.zip
+            cat \
+              GRXT-Math-build/src/chunk-00.b64 \
+              GRXT-Math-build/src/chunk-01.b64 \
+              GRXT-Math-build/src/chunk-02a.b64 \
+              GRXT-Math-build/src/chunk-02b.b64 \
+              GRXT-Math-build/src/chunk-02c.b64 \
+              GRXT-Math-build/src/chunk-02d.b64 \
+              GRXT-Math-build/src/chunk-03.b64 \
+              GRXT-Math-build/src/chunk-04.b64 \
+              GRXT-Math-build/src/chunk-05.b64 \
+              | base64 --decode > /tmp/GRXT-Math.zip
+
+            echo '3a6b5ab316edb36719266f4b6afe709c27d16c284f8465633b0b7006680f8404  /tmp/GRXT-Math.zip' | sha256sum -c -
+            unzip -t /tmp/GRXT-Math.zip
             unzip -q /tmp/GRXT-Math.zip -d .
             test -f GRXT-Math/settings.gradle.kts
 
