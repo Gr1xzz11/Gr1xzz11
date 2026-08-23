@@ -1,0 +1,86 @@
+name: GRXT Math APK
+
+on:
+  push:
+    branches: [grxt-math-build]
+    paths:
+      - 'GRXT-Math-build/src/**'
+      - '.github/workflows/grxt-math-apk.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: grxt-math-apk-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: grxt-math-build
+
+      - name: Restore project
+        shell: bash
+        run: |
+          cat GRXT-Math-build/src/chunk-*.b64 | base64 --decode > /tmp/GRXT-Math.zip
+          unzip -q /tmp/GRXT-Math.zip -d .
+          test -f GRXT-Math/settings.gradle.kts
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Install Android SDK 37
+        shell: bash
+        run: |
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" \
+            'platform-tools' \
+            'platforms;android-37' \
+            'build-tools;37.0.0'
+
+      - name: Build and test
+        working-directory: GRXT-Math
+        shell: bash
+        run: |
+          chmod +x gradlew
+          ./gradlew --no-daemon :math-core:test :app:assembleDebug
+
+      - name: Publish APK to branch
+        shell: bash
+        run: |
+          mkdir -p GRXT-Math-build/output
+          cp GRXT-Math/app/build/outputs/apk/debug/app-debug.apk \
+             GRXT-Math-build/output/GRXT-Math-0.1.0-debug.apk
+          sha256sum GRXT-Math-build/output/GRXT-Math-0.1.0-debug.apk \
+            > GRXT-Math-build/output/GRXT-Math-0.1.0-debug.apk.sha256
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f GRXT-Math-build/output/GRXT-Math-0.1.0-debug.apk \
+                     GRXT-Math-build/output/GRXT-Math-0.1.0-debug.apk.sha256
+          if git diff --cached --quiet; then
+            echo 'APK is unchanged.'
+          else
+            git commit -m 'build: publish GRXT Math APK [skip ci]'
+            git push origin HEAD:grxt-math-build
+          fi
+
+      - name: Upload APK artifact fallback
+        if: always()
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: GRXT-Math-0.1.0-debug
+          path: GRXT-Math/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: ignore
+          retention-days: 1
