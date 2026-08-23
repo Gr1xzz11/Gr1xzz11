@@ -57,6 +57,9 @@ jobs:
             unzip -q /tmp/GRXT-Math.zip -d .
             test -f GRXT-Math/settings.gradle.kts
 
+            sed -i '/import androidx.compose.foundation.layout.weight/d' \
+              GRXT-Math/app/src/main/java/com/grxt/math/ui/GrxtMathApp.kt
+
             SDKMANAGER="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
             yes | "$SDKMANAGER" --licenses >/dev/null || true
             "$SDKMANAGER" --channel=3 \
