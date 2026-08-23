@@ -57,11 +57,12 @@ jobs:
             unzip -q /tmp/GRXT-Math.zip -d .
             test -f GRXT-Math/settings.gradle.kts
 
-            yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
-            "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" \
+            SDKMANAGER="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
+            yes | "$SDKMANAGER" --licenses >/dev/null || true
+            "$SDKMANAGER" --channel=3 \
               'platform-tools' \
               'platforms;android-37' \
-              'build-tools;37.0.0'
+              'build-tools;36.0.0'
 
             cd GRXT-Math
             chmod +x gradlew
