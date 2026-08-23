@@ -1,5 +1,59 @@
-warning [/tmp/GRXT-Math.zip]:  5250 extra bytes at beginning or within zipfile
-  (attempting to process anyway)
-file #1:  bad zipfile offset (local header sig):  5250
-  (attempting to re-compensate)
-error: invalid zip file with overlapped components (possible zip bomb)
+/tmp/GRXT-Math.zip: OK
+Archive:  /tmp/GRXT-Math.zip
+    testing: GRXT-Math/               OK
+    testing: GRXT-Math/tools/         OK
+    testing: GRXT-Math/tools/EngineSmokeTest.kt   OK
+    testing: GRXT-Math/tools/test-engine.sh   OK
+    testing: GRXT-Math/app/           OK
+    testing: GRXT-Math/app/src/       OK
+    testing: GRXT-Math/app/src/main/   OK
+    testing: GRXT-Math/app/src/main/java/   OK
+    testing: GRXT-Math/app/src/main/java/com/   OK
+    testing: GRXT-Math/app/src/main/java/com/grxt/   OK
+    testing: GRXT-Math/app/src/main/java/com/grxt/math/   OK
+    testing: GRXT-Math/app/src/main/java/com/grxt/math/MainActivity.kt   OK
+    testing: GRXT-Math/app/src/main/java/com/grxt/math/storage/   OK
+    testing: GRXT-Math/app/src/main/java/com/grxt/math/storage/HistoryStore.kt   OK
+    testing: GRXT-Math/app/src/main/java/com/grxt/math/ocr/   OK
+    testing: GRXT-Math/app/src/main/java/com/grxt/math/ocr/MathOcr.kt   OK
+    testing: GRXT-Math/app/src/main/java/com/grxt/math/ui/   OK
+    testing: GRXT-Math/app/src/main/java/com/grxt/math/ui/GrxtMathApp.kt   OK
+    testing: GRXT-Math/app/src/main/res/   OK
+    testing: GRXT-Math/app/src/main/res/values/   OK
+    testing: GRXT-Math/app/src/main/res/values/strings.xml   OK
+    testing: GRXT-Math/app/src/main/res/xml/   OK
+    testing: GRXT-Math/app/src/main/res/xml/file_paths.xml   OK
+    testing: GRXT-Math/app/src/main/res/mipmap-hdpi/   OK
+    testing: GRXT-Math/app/src/main/AndroidManifest.xml   OK
+    testing: GRXT-Math/app/build.gradle.kts   OK
+    testing: GRXT-Math/.gitignore     OK
+    testing: GRXT-Math/gradle/        OK
+    testing: GRXT-Math/gradle/wrapper/   OK
+    testing: GRXT-Math/gradle/wrapper/gradle-wrapper.properties   OK
+    testing: GRXT-Math/TEST_REPORT.md   OK
+    testing: GRXT-Math/gradlew        OK
+    testing: GRXT-Math/gradle.properties   OK
+    testing: GRXT-Math/math-core/     OK
+    testing: GRXT-Math/math-core/src/   OK
+    testing: GRXT-Math/math-core/src/main/   OK
+    testing: GRXT-Math/math-core/src/main/kotlin/   OK
+    testing: GRXT-Math/math-core/src/main/kotlin/com/   OK
+    testing: GRXT-Math/math-core/src/main/kotlin/com/grxt/   OK
+    testing: GRXT-Math/math-core/src/main/kotlin/com/grxt/math/   OK
+    testing: GRXT-Math/math-core/src/main/kotlin/com/grxt/math/core/   OK
+    testing: GRXT-Math/math-core/src/main/kotlin/com/grxt/math/core/MathEngine.kt   OK
+    testing: GRXT-Math/math-core/src/test/   OK
+    testing: GRXT-Math/math-core/src/test/kotlin/   OK
+    testing: GRXT-Math/math-core/src/test/kotlin/com/   OK
+    testing: GRXT-Math/math-core/src/test/kotlin/com/grxt/   OK
+    testing: GRXT-Math/math-core/src/test/kotlin/com/grxt/math/   OK
+    testing: GRXT-Math/math-core/src/test/kotlin/com/grxt/math/core/   OK
+    testing: GRXT-Math/math-core/src/test/kotlin/com/grxt/math/core/MathEngineTest.kt   OK
+    testing: GRXT-Math/math-core/build.gradle.kts   OK
+    testing: GRXT-Math/build.gradle.kts   OK
+    testing: GRXT-Math/settings.gradle.kts   OK
+    testing: GRXT-Math/README.md      OK
+No errors detected in compressed data of /tmp/GRXT-Math.zip.
+yes: standard output: Broken pipe
+Loading package information...                                                  Loading local repository...                                                     [                                       ] 3% Loading local repository...        [                                       ] 3% Fetch remote repository...         [=                                      ] 3% Fetch remote repository...         [=                                      ] 4% Fetch remote repository...         [=                                      ] 5% Fetch remote repository...         [==                                     ] 5% Fetch remote repository...         [==                                     ] 6% Fetch remote repository...         [==                                     ] 7% Fetch remote repository...         [==                                     ] 7% Computing updates...               [===                                    ] 8% Computing updates...               [===                                    ] 10% Computing updates...                                                                                              Warning: Failed to find package 'platforms;android-37'
+[===                                    ] 10% Computing updates...              
