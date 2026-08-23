@@ -1,1 +1,1 @@
-FAILED (exit 2)
+FAILED (exit 1)
