@@ -56,7 +56,13 @@ jobs:
             echo '3a6b5ab316edb36719266f4b6afe709c27d16c284f8465633b0b7006680f8404  /tmp/GRXT-Math.zip' | sha256sum -c -
             unzip -q /tmp/GRXT-Math.zip -d .
 
-            cat GRXT-Math-build/update-0.2/patch-*.b64 > /tmp/grxt020.patch.gz.b64
+            cat \
+              GRXT-Math-build/update-0.2/patch-00.b64 \
+              GRXT-Math-build/update-0.2/patch-01.b64 \
+              GRXT-Math-build/update-0.2/patch-02a.b64 \
+              GRXT-Math-build/update-0.2/patch-02b.b64 \
+              GRXT-Math-build/update-0.2/patch-03.b64 \
+              > /tmp/grxt020.patch.gz.b64
             echo 'acb0af31fdb5edd52fbf4c04dcace77fc3e41c33d13326f233731f33e88b3080  /tmp/grxt020.patch.gz.b64' | sha256sum -c -
             base64 --decode /tmp/grxt020.patch.gz.b64 | gunzip > /tmp/grxt020.patch
             echo '68ce878c045f2d580ebc24d67846be00bde8a54ea42ce72cfc16c62f8bea0610  /tmp/grxt020.patch' | sha256sum -c -
