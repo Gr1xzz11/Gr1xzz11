@@ -5,6 +5,7 @@ on:
     branches: [grxt-math-build]
     paths:
       - 'GRXT-Math-build/src/**'
+      - 'GRXT-Math-build/update-0.2/**'
       - '.github/workflows/grxt-math-apk.yml'
   workflow_dispatch:
 
@@ -53,12 +54,14 @@ jobs:
               | base64 --decode > /tmp/GRXT-Math.zip
 
             echo '3a6b5ab316edb36719266f4b6afe709c27d16c284f8465633b0b7006680f8404  /tmp/GRXT-Math.zip' | sha256sum -c -
-            unzip -t /tmp/GRXT-Math.zip
             unzip -q /tmp/GRXT-Math.zip -d .
-            test -f GRXT-Math/settings.gradle.kts
 
-            sed -i '/import androidx.compose.foundation.layout.weight/d' \
-              GRXT-Math/app/src/main/java/com/grxt/math/ui/GrxtMathApp.kt
+            cat GRXT-Math-build/update-0.2/patch-*.b64 > /tmp/grxt020.patch.gz.b64
+            echo 'acb0af31fdb5edd52fbf4c04dcace77fc3e41c33d13326f233731f33e88b3080  /tmp/grxt020.patch.gz.b64' | sha256sum -c -
+            base64 --decode /tmp/grxt020.patch.gz.b64 | gunzip > /tmp/grxt020.patch
+            echo '68ce878c045f2d580ebc24d67846be00bde8a54ea42ce72cfc16c62f8bea0610  /tmp/grxt020.patch' | sha256sum -c -
+            cd GRXT-Math
+            patch -p1 < /tmp/grxt020.patch
 
             SDKMANAGER="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
             yes | "$SDKMANAGER" --licenses >/dev/null || true
@@ -67,7 +70,6 @@ jobs:
               'platforms;android-37.0' \
               'build-tools;37.0.0'
 
-            cd GRXT-Math
             chmod +x gradlew
             ./gradlew --no-daemon :math-core:test :app:assembleDebug
           ) >"$LOG" 2>&1
@@ -76,26 +78,26 @@ jobs:
 
           OUT=GRXT-Math-build/output
           mkdir -p "$OUT"
-          rm -f "$OUT/GRXT-Math-0.1.0-debug.apk" \
-                "$OUT/GRXT-Math-0.1.0-debug.apk.sha256" \
-                "$OUT/BUILD_FAILED.log" \
-                "$OUT/status.txt"
+          rm -f "$OUT/GRXT-Math-0.2.0-debug.apk" \
+                "$OUT/GRXT-Math-0.2.0-debug.apk.sha256" \
+                "$OUT/BUILD_FAILED_0.2.log" \
+                "$OUT/status-0.2.txt"
 
           if [ "$RC" -eq 0 ] && [ -f GRXT-Math/app/build/outputs/apk/debug/app-debug.apk ]; then
             cp GRXT-Math/app/build/outputs/apk/debug/app-debug.apk \
-               "$OUT/GRXT-Math-0.1.0-debug.apk"
-            sha256sum "$OUT/GRXT-Math-0.1.0-debug.apk" \
-              > "$OUT/GRXT-Math-0.1.0-debug.apk.sha256"
-            printf 'SUCCESS\n' > "$OUT/status.txt"
+               "$OUT/GRXT-Math-0.2.0-debug.apk"
+            sha256sum "$OUT/GRXT-Math-0.2.0-debug.apk" \
+              > "$OUT/GRXT-Math-0.2.0-debug.apk.sha256"
+            printf 'SUCCESS\n' > "$OUT/status-0.2.txt"
           else
-            cp "$LOG" "$OUT/BUILD_FAILED.log"
-            printf 'FAILED (exit %s)\n' "$RC" > "$OUT/status.txt"
+            cp "$LOG" "$OUT/BUILD_FAILED_0.2.log"
+            printf 'FAILED (exit %s)\n' "$RC" > "$OUT/status-0.2.txt"
           fi
 
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -f "$OUT"
-          git commit -m 'build: GRXT Math result [skip ci]' || true
+          git commit -m 'build: GRXT Math 0.2 result [skip ci]' || true
           git push origin HEAD:grxt-math-build
 
           exit "$RC"
