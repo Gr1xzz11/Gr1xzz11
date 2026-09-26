@@ -40,7 +40,7 @@
 
 ---
 
-## ◈ Проекты
+## 📦 Репозитории
 
 <table>
 <tr>
@@ -48,7 +48,7 @@
 
 ### 🌐 [GRXT WS Proxy](https://github.com/Gr1xzz11/GRXT-WS-Proxy)
 
-Android/network-проект GRXT для работы с сетевыми подключениями и диагностикой.
+Android/network-проект для подключений и сервисов GRXT.
 
 `Android` `Network` `GRXT`
 
@@ -57,7 +57,7 @@ Android/network-проект GRXT для работы с сетевыми под
 
 ### 🛡️ [BanHelper](https://github.com/Gr1xzz11/BanHelper)
 
-Инструменты и автоматизация для работы с модерацией и отчётами.
+Инструменты и автоматизация для модерации.
 
 `Python` `Desktop` `Automation`
 
@@ -66,24 +66,50 @@ Android/network-проект GRXT для работы с сетевыми под
 <tr>
 <td width="50%" valign="top">
 
+### 🔁 [BanHelper V2 ReCode](https://github.com/Gr1xzz11/BanHelper_V2_ReCode)
+
+Переписанная версия BanHelper с обновлённой архитектурой.
+
+`Python` `ReCode` `Automation`
+
+</td>
+<td width="50%" valign="top">
+
+### 🔎 [ShaniCheck](https://github.com/Gr1xzz11/ShaniCheck)
+
+Один из крупных публичных проектов аккаунта.
+
+`Tools` `Software`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
 ### 📁 [FileSorter](https://github.com/Gr1xzz11/FileSorter)
 
-Утилита для автоматической сортировки и организации файлов.
+Утилита для автоматической сортировки файлов.
 
 `Python` `Utility`
 
 </td>
 <td width="50%" valign="top">
 
-### ◈ [GRXT](https://grxt.dev)
+### 🚀 [GRXT](https://grxt.dev)
 
-Мои приложения, инструменты и инфраструктура под единым названием GRXT.
+Приложения, сервисы и инфраструктура под одним брендом.
 
 `Desktop` `Mobile` `Backend` `Network`
 
 </td>
 </tr>
 </table>
+
+<div align="center">
+
+[![Все репозитории](https://img.shields.io/badge/Все%20репозитории-111827?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Gr1xzz11?tab=repositories)
+
+</div>
 
 ---
 
@@ -147,7 +173,7 @@ Android/network-проект GRXT для работы с сетевыми под
 
 <div align="center">
 
-### ◈ GRXT
+### GRXT
 
 **Программы • инструменты • инфраструктура**
 
