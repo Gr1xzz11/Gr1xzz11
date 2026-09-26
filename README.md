@@ -1,111 +1,144 @@
 <div align="center">
 
-# GRXT
+# ◈ GRXT
 
-### software / infrastructure / experiments
+### `software · android · backend · linux · infrastructure`
 
-**Gr1xzz1** — developer building desktop, Android, backend and network tools.
+**Gr1xzz1** — developer behind GRXT.
 
-[grxt.dev](https://grxt.dev) · [projects](#selected-projects) · [stack](#stack)
+[![Website](https://img.shields.io/badge/grxt.dev-0d1117?style=for-the-badge&logo=googlechrome&logoColor=58A6FF)](https://grxt.dev)
+[![GitHub](https://img.shields.io/badge/@Gr1xzz11-0d1117?style=for-the-badge&logo=github&logoColor=ffffff)](https://github.com/Gr1xzz11)
+![Profile views](https://komarev.com/ghpvc/?username=Gr1xzz11&style=for-the-badge&color=1f6feb&label=VIEWS)
 
 </div>
 
 ---
 
-## About
-
-I build tools I actually want to use: desktop utilities, Android apps, backend services, automation and infrastructure.
-
-Most of my work lives around **GRXT** — a collection of software, services and experiments across Linux, Android and the web.
-
 ```text
-focus/
-├─ desktop
-├─ android
-├─ backend
-├─ networking
-└─ infrastructure
+GRXT SYSTEM
+│
+├── desktop        Python / Java / JavaFX
+├── mobile         Android / Java
+├── backend        API / MySQL / Docker
+├── network        proxies / services / tooling
+├── infrastructure Linux / Nginx / Cloudflare / VPS
+└── automation     GitHub Actions / deploy / monitoring
 ```
 
 ## Stack
 
-`Python` · `Java` · `Android` · `Linux` · `MySQL` · `Nginx` · `Git` · `GitHub Actions`
+<div align="center">
 
-<details>
-<summary><b>tooling</b></summary>
+<img src="https://skillicons.dev/icons?i=python,java,kotlin,androidstudio,linux,mysql,docker,nginx,cloudflare,git,github,idea,vscode&perline=13" alt="Tech stack" />
+
+</div>
+
 <br>
 
-- **Desktop:** Python, Java, JavaFX
-- **Mobile:** Android, Java
-- **Backend:** APIs, MySQL, Docker
-- **Infrastructure:** Linux, Nginx, Cloudflare, VPS
-- **Workflow:** Git, GitHub Actions, IntelliJ IDEA, Android Studio, VS Code
+<div align="center">
 
-</details>
+`Python` · `Java` · `Android` · `Linux` · `MySQL` · `Docker` · `Nginx` · `GitHub Actions`
 
-## Selected projects
+</div>
+
+---
+
+## Repositories
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### [GRXT WS Proxy](https://github.com/Gr1xzz11/GRXT-WS-Proxy)
+### ◈ [GRXT-WS-Proxy](https://github.com/Gr1xzz11/GRXT-WS-Proxy)
 
-Android and network tooling for GRXT communication, remote access and connection workflows.
+Android/network project for GRXT communication, proxying and remote connection workflows.
 
 `Android` `Network` `GRXT`
 
 </td>
 <td width="50%" valign="top">
 
-### [BanHelper](https://github.com/Gr1xzz11/BanHelper)
+### ◈ [BanHelper](https://github.com/Gr1xzz11/BanHelper)
 
-Moderation and automation tooling focused on reducing repetitive work.
+Moderation and automation tooling.
 
-`Python` `Automation` `Desktop`
+`Python` `Desktop` `Automation`
 
 </td>
 </tr>
+
 <tr>
 <td width="50%" valign="top">
 
-### [ShaniCheck](https://github.com/Gr1xzz11/ShaniCheck)
+### ◈ [BanHelper V2 ReCode](https://github.com/Gr1xzz11/BanHelper_V2_ReCode)
 
-One of my larger public projects and experiments.
+A rewritten generation of BanHelper with a cleaner codebase and updated architecture.
 
-`Software` `GRXT`
+`Python` `ReCode` `Automation`
 
 </td>
 <td width="50%" valign="top">
 
-### [GRXT](https://grxt.dev)
+### ◈ [ShaniCheck](https://github.com/Gr1xzz11/ShaniCheck)
 
-The umbrella for my apps, services, infrastructure and experiments.
+Public software project and one of the larger repositories on this account.
 
-`Desktop` `Mobile` `Backend` `Infra`
+`Software` `Tools`
+
+</td>
+</tr>
+
+<tr>
+<td width="50%" valign="top">
+
+### ◈ [FileSorter](https://github.com/Gr1xzz11/FileSorter)
+
+Utility for sorting and organizing files automatically.
+
+`Python` `Utility` `Automation`
+
+</td>
+<td width="50%" valign="top">
+
+### ◈ [Gr1xzz1](https://github.com/Gr1xzz11/Gr1xzz1)
+
+Personal repository and experiments.
+
+`Personal` `Experiments`
 
 </td>
 </tr>
 </table>
 
-## Current work
+<div align="right">
 
-```text
-$ status
+[**all repositories →**](https://github.com/Gr1xzz11?tab=repositories)
 
-building    GRXT ecosystem
-working_on  Android + desktop applications
-running     backend services and infrastructure
-automating  builds, releases and deployment
-learning    by shipping
+</div>
+
+---
+
+## Now
+
+```console
+grxt@dev:~$ status
+
+[ active ] GRXT ecosystem
+[ active ] Android applications
+[ active ] desktop software
+[ active ] backend services
+[ active ] VPS / infrastructure
+[ active ] CI / builds / deployment
 ```
+
+---
 
 ## GitHub
 
 <div align="center">
 
-<img height="165" src="./assets/github-stats.svg" alt="GitHub stats" />
-<img height="165" src="./assets/top-langs.svg" alt="Top languages" />
+<img height="170" src="./assets/github-stats.svg" alt="GitHub stats" />
+<img height="170" src="./assets/top-langs.svg" alt="Top languages" />
 
 </div>
 
@@ -113,9 +146,9 @@ learning    by shipping
 
 <div align="center">
 
-**GRXT**
+### ◈ GRXT
 
-Build useful things. Break boring workflows.
+**Build. Deploy. Break. Fix. Repeat.**
 
 [grxt.dev](https://grxt.dev)
 
