@@ -1,162 +1,122 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:0B1020,50:1D4ED8,100:7C3AED&text=GRXT&fontColor=F8FAFC&fontSize=72&fontAlignY=38&desc=Gr1xzz1%20%E2%80%A2%20Developer&descAlignY=60&animation=fadeIn" alt="GRXT Header" />
+# GRXT
 
-### Разработчик • Создаю свои проекты • Постоянно учусь
+### software / infrastructure / experiments
 
-Мне нравится создавать программы, экспериментировать с технологиями и превращать идеи в работающие проекты.
+**Gr1xzz1** — developer building desktop, Android, backend and network tools.
 
-<br>
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=21&pause=1200&color=58A6FF&center=true&vCenter=true&width=820&height=50&lines=Python%20%E2%80%A2%20Java%20%E2%80%A2%20Android;%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%8E%20%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5%20%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B%20%D0%B8%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F;Linux%20%E2%80%A2%20Backend%20%E2%80%A2%20Network%20%E2%80%A2%20Mobile)](https://git.io/typing-svg)
-
-<br>
-
-[![Website](https://img.shields.io/badge/grxt.dev-111827?style=for-the-badge&logo=googlechrome&logoColor=58A6FF)](https://grxt.dev)
-[![GitHub](https://img.shields.io/badge/GitHub-Gr1xzz11-111827?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Gr1xzz11)
-![Profile views](https://komarev.com/ghpvc/?username=Gr1xzz11&style=for-the-badge&color=2563EB&label=PROFILE+VIEWS)
+[grxt.dev](https://grxt.dev) · [projects](#selected-projects) · [stack](#stack)
 
 </div>
 
 ---
 
-## 👨‍💻 Обо мне
+## About
 
-- Программированием занимаюсь уже **более 4 лет**
-- Основные языки — **Python и Java**
-- Разрабатываю приложения для **Linux, Windows и Android**
-- Работаю с backend, API, серверной инфраструктурой и сетевыми инструментами
-- Люблю не просто изучать технологии, а применять их в реальных проектах
+I build tools I actually want to use: desktop utilities, Android apps, backend services, automation and infrastructure.
 
----
+Most of my work lives around **GRXT** — a collection of software, services and experiments across Linux, Android and the web.
 
-## 🛠 Языки и инструменты
+```text
+focus/
+├─ desktop
+├─ android
+├─ backend
+├─ networking
+└─ infrastructure
+```
 
-<div align="center">
+## Stack
 
-<img src="https://skillicons.dev/icons?i=python,java,html,androidstudio,vscode,idea,git,github,linux,mysql,nginx&perline=11" alt="Технологии" />
+`Python` · `Java` · `Android` · `Linux` · `MySQL` · `Nginx` · `Git` · `GitHub Actions`
 
-</div>
+<details>
+<summary><b>tooling</b></summary>
+<br>
 
----
+- **Desktop:** Python, Java, JavaFX
+- **Mobile:** Android, Java
+- **Backend:** APIs, MySQL, Docker
+- **Infrastructure:** Linux, Nginx, Cloudflare, VPS
+- **Workflow:** Git, GitHub Actions, IntelliJ IDEA, Android Studio, VS Code
 
-## ◈ Проекты
+</details>
+
+## Selected projects
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 🌐 [GRXT WS Proxy](https://github.com/Gr1xzz11/GRXT-WS-Proxy)
+### [GRXT WS Proxy](https://github.com/Gr1xzz11/GRXT-WS-Proxy)
 
-Android/network-проект GRXT для работы с сетевыми подключениями и диагностикой.
+Android and network tooling for GRXT communication, remote access and connection workflows.
 
 `Android` `Network` `GRXT`
 
 </td>
 <td width="50%" valign="top">
 
-### 🛡️ [BanHelper](https://github.com/Gr1xzz11/BanHelper)
+### [BanHelper](https://github.com/Gr1xzz11/BanHelper)
 
-Инструменты и автоматизация для работы с модерацией и отчётами.
+Moderation and automation tooling focused on reducing repetitive work.
 
-`Python` `Desktop` `Automation`
+`Python` `Automation` `Desktop`
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### 📁 [FileSorter](https://github.com/Gr1xzz11/FileSorter)
+### [ShaniCheck](https://github.com/Gr1xzz11/ShaniCheck)
 
-Утилита для автоматической сортировки и организации файлов.
+One of my larger public projects and experiments.
 
-`Python` `Utility`
+`Software` `GRXT`
 
 </td>
 <td width="50%" valign="top">
 
-### ◈ [GRXT](https://grxt.dev)
+### [GRXT](https://grxt.dev)
 
-Мои приложения, инструменты и инфраструктура под единым названием GRXT.
+The umbrella for my apps, services, infrastructure and experiments.
 
-`Desktop` `Mobile` `Backend` `Network`
+`Desktop` `Mobile` `Backend` `Infra`
 
 </td>
 </tr>
 </table>
 
----
+## Current work
 
-## ⚡ Сейчас в фокусе
+```text
+$ status
 
-- развитие проектов **GRXT**
-- Android и desktop-приложения
-- backend, API и собственная инфраструктура
-- автоматизация сборок и публикаций через GitHub Actions
+building    GRXT ecosystem
+working_on  Android + desktop applications
+running     backend services and infrastructure
+automating  builds, releases and deployment
+learning    by shipping
+```
 
----
-
-## 📊 GitHub Stats
-
-<table width="100%">
-<tr>
-<td width="50%" valign="top" align="center">
-<img width="100%" src="./assets/github-stats.svg" alt="GitHub Stats" />
-</td>
-<td width="50%" valign="top" align="center">
-<img width="100%" src="./assets/top-langs.svg" alt="Top Languages" />
-</td>
-</tr>
-</table>
-
----
-
-## 🐍 Активность
+## GitHub
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Gr1xzz11/Gr1xzz11/output/github-contribution-grid-snake.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Gr1xzz11/Gr1xzz11/output/github-contribution-grid-snake-light.svg" />
-  <img alt="Contribution snake" src="https://raw.githubusercontent.com/Gr1xzz11/Gr1xzz11/output/github-contribution-grid-snake.svg" />
-</picture>
+<img height="165" src="./assets/github-stats.svg" alt="GitHub stats" />
+<img height="165" src="./assets/top-langs.svg" alt="Top languages" />
 
 </div>
 
 ---
 
-## 🚀 Чем занимаюсь
-
-```text
-Разработка
-├── Python
-├── Java
-├── Android
-├── Desktop
-└── Web / API
-
-Инфраструктура
-├── Linux
-├── VPS
-├── Nginx
-├── MySQL
-└── GitHub Actions
-```
-
----
-
 <div align="center">
 
-### ◈ GRXT
+**GRXT**
 
-**Программы • инструменты • инфраструктура**
+Build useful things. Break boring workflows.
 
-🌐 [grxt.dev](https://grxt.dev)
-
-<br>
-
-<sub>Создавать. Экспериментировать. Развиваться.</sub>
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=110&section=footer&color=0:7C3AED,50:1D4ED8,100:0B1020" alt="GRXT Footer" />
+[grxt.dev](https://grxt.dev)
 
 </div>
